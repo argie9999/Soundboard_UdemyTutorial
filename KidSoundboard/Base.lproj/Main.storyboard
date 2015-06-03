@@ -52,9 +52,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wr0-8g-mBE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="BCI-od-m8i"/>
+                                    <constraint firstAttribute="height" constant="64" id="BCI-od-m8i"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="New Sound" id="cbk-RF-cPv">

@@ -50,6 +50,8 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var sound = self.sounds[indexPath.row]
         
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
         var pathComponents = [baseString, sound.url]
         var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)!
