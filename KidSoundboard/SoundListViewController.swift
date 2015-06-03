@@ -23,17 +23,6 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-//        var soundPath = NSBundle.mainBundle().pathForResource("cough", ofType: "m4a")
-//        var soundUrl = NSURL.fileURLWithPath(soundPath!)
-        
-//        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
-//        
-//        var sound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as! Sound
-//        sound.name = "Cough"
-//        sound.url = soundUrl!.absoluteString!
-//        
-//        context.save(nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,13 +50,10 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var sound = self.sounds[indexPath.row]
         
-        
         var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
-//        self.audioURL = NSUUID.UUID().UUIDString + ".m4a"
         var pathComponents = [baseString, sound.url]
         var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)!
         
-//        var url = NSURL(string: sound.url)
         self.audioPlayer = AVAudioPlayer(contentsOfURL: audioNSURL, error: nil)
         self.audioPlayer.play()
     }

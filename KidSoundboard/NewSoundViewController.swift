@@ -52,14 +52,7 @@ class NewSoundViewController : UIViewController {
     
     
     @IBAction func saveTapped(sender: AnyObject) {
-        // Create a sound object
-//        var sound = Sound()
-//        sound.name = self.soundTextField.text!
-//        sound.URL = self.audioURL
-        
-        // Add sound to sounds array
-//        self.soundListViewController.sounds.append(sound)
-        
+      
         // Save sound to Core Data
         var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
         
