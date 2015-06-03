@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A29AA0E7-8AB8-41A5-B5FD-498B6AAD9318</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D87EBFB761BFC9B40E59AE59E44552C8854F5162</key>
+		<string>https://github.com/argie9999/Soundboard_UdemyTutorial.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KidSoundboard.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D87EBFB761BFC9B40E59AE59E44552C8854F5162</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/argie9999/Soundboard_UdemyTutorial.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D87EBFB761BFC9B40E59AE59E44552C8854F5162</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D87EBFB761BFC9B40E59AE59E44552C8854F5162</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KidSoundboard</string>
+		</dict>
+	</array>
+</dict>
+</plist>

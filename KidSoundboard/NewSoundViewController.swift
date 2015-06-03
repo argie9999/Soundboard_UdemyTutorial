@@ -8,14 +8,16 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class NewSoundViewController : UIViewController {
     
     required init(coder aDecoder: NSCoder) {
         
         var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
-        var pathComponents = [baseString, "MyAudio.m4a"]
-        self.audioURL = NSURL.fileURLWithPathComponents(pathComponents)!
+        self.audioURL = NSUUID().UUIDString + ".m4a"
+        var pathComponents = [baseString, self.audioURL]
+        var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)!
 
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
@@ -25,7 +27,7 @@ class NewSoundViewController : UIViewController {
         recordSettings[AVSampleRateKey] = 44100.0
         recordSettings[AVNumberOfChannelsKey] = 2
         
-        self.audioRecorder = AVAudioRecorder(URL: audioURL, settings: recordSettings, error: nil)
+        self.audioRecorder = AVAudioRecorder(URL: audioNSURL, settings: recordSettings, error: nil)
         self.audioRecorder.meteringEnabled = true
         self.audioRecorder.prepareToRecord()
         
@@ -37,7 +39,7 @@ class NewSoundViewController : UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     
     var audioRecorder: AVAudioRecorder
-    var audioURL: NSURL
+    var audioURL: String
     var soundListViewController = SoundListViewController()
     
     override func viewDidLoad() {
@@ -51,12 +53,22 @@ class NewSoundViewController : UIViewController {
     
     @IBAction func saveTapped(sender: AnyObject) {
         // Create a sound object
-        var sound = Sound()
-        sound.name = self.soundTextField.text!
-        sound.URL = self.audioURL
+//        var sound = Sound()
+//        sound.name = self.soundTextField.text!
+//        sound.URL = self.audioURL
         
         // Add sound to sounds array
-        self.soundListViewController.sounds.append(sound)
+//        self.soundListViewController.sounds.append(sound)
+        
+        // Save sound to Core Data
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        
+        // Create a new sound
+        var sound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as! Sound
+        sound.name = self.soundTextField.text!
+        sound.url = self.audioURL
+        
+        context.save(nil)
         
         // Dismiss ViewController
         self.dismissViewControllerAnimated(true, completion: nil)

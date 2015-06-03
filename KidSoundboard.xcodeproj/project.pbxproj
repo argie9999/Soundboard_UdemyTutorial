@@ -15,8 +15,8 @@
 		8EAF81E91B1E08A000C8479B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EAF81E71B1E08A000C8479B /* LaunchScreen.xib */; };
 		8EAF81F51B1E08A100C8479B /* KidSoundboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF81F41B1E08A100C8479B /* KidSoundboardTests.swift */; };
 		8EAF81FF1B1E0B8200C8479B /* cough.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8EAF81FE1B1E0B8200C8479B /* cough.m4a */; };
-		8EAF82011B1E10F400C8479B /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF82001B1E10F400C8479B /* Sound.swift */; };
 		8EAF82031B1E161F00C8479B /* NewSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF82021B1E161F00C8479B /* NewSoundViewController.swift */; };
+		8EAF820B1B1E3C3500C8479B /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF820A1B1E3C3500C8479B /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,8 @@
 		8EAF81F31B1E08A100C8479B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EAF81F41B1E08A100C8479B /* KidSoundboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidSoundboardTests.swift; sourceTree = "<group>"; };
 		8EAF81FE1B1E0B8200C8479B /* cough.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = cough.m4a; path = ../../../../../../Desktop/cough.m4a; sourceTree = "<group>"; };
-		8EAF82001B1E10F400C8479B /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		8EAF82021B1E161F00C8479B /* NewSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSoundViewController.swift; sourceTree = "<group>"; };
+		8EAF820A1B1E3C3500C8479B /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 		8EAF81D81B1E08A000C8479B /* KidSoundboard */ = {
 			isa = PBXGroup;
 			children = (
+				8EAF820A1B1E3C3500C8479B /* Sound.swift */,
 				8EAF81FE1B1E0B8200C8479B /* cough.m4a */,
-				8EAF82001B1E10F400C8479B /* Sound.swift */,
 				8EAF81DB1B1E08A000C8479B /* AppDelegate.swift */,
 				8EAF81E01B1E08A000C8479B /* SoundListViewController.swift */,
 				8EAF82021B1E161F00C8479B /* NewSoundViewController.swift */,
@@ -225,10 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAF820B1B1E3C3500C8479B /* Sound.swift in Sources */,
 				8EAF81E11B1E08A000C8479B /* SoundListViewController.swift in Sources */,
 				8EAF81DC1B1E08A000C8479B /* AppDelegate.swift in Sources */,
 				8EAF81DF1B1E08A000C8479B /* KidSoundboard.xcdatamodeld in Sources */,
-				8EAF82011B1E10F400C8479B /* Sound.swift in Sources */,
 				8EAF82031B1E161F00C8479B /* NewSoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
